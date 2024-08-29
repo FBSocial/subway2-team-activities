@@ -1,0 +1,48 @@
+.captcha {
+  width: 100%;
+}
+.captcha .character {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 42px;
+  width: 42px;
+  border-radius: 5px;
+  @apply bg-b/5;
+  border: none !important;
+  font-family: inherit;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.captcha .character--selected {
+  position: relative;
+  outline: none;
+}
+
+/* optionally hide placeholder (in case it overlaps the cursor) */
+.character--selected:not(.character--filled) {
+  color: transparent;
+}
+
+.character--selected:not(.character--filled)::after {
+  content: '';
+  width: 1.5px;
+  height: 20px;
+  background: #198cfe;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: blink 1s infinite step-end;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}

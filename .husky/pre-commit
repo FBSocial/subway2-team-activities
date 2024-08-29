@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# 检测是否安装了 pnpm
+if command -v pnpm &> /dev/null
+then
+    echo "pnpm is installed, running pnpm dlx lint-staged"
+    pnpm dlx lint-staged
+else
+    echo "pnpm is not installed, running npx lint-staged"
+    npx lint-staged
+fi
