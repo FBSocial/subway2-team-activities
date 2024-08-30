@@ -15,7 +15,7 @@ import Title from './Title';
 /**
  * @typedef {Object} RewardData
  * @property {GiftItemStruct[]} leader - 邀请奖励列表
- * @property {GiftItemStruct[]} member - 回归奖励列表
+ * @property {GiftItemStruct[]} member - 入团奖励列表
  */
 
 /**
@@ -142,7 +142,7 @@ function MyReward() {
     <div>
       <div className={'w-full rounded-[15px] bg-white pb-5'}>
         <RewardList title="邀请奖励：" items={data.leader} />
-        <RewardList title="回归奖励：" items={data.member} />
+        <RewardList title="入团奖励：" items={data.member} />
       </div>
     </div>
   );
