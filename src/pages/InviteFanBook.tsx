@@ -23,7 +23,7 @@ export function Component() {
   const handleWakeUpApp = () => {
     if (!window?.openInstall) return;
     const clientParams = {
-      path: '/subway-team-activities/team',
+      path: '/subway2-team-activities/team',
       code: inviteData?.invite_code,
       guildId: guild?.guild_id,
     };
